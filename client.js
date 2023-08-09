@@ -1,3 +1,4 @@
+const { write } = require("fs");
 const net = require("net");
 
 // establishes a connection with the game server
@@ -8,7 +9,9 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    console.log('Connected');
+    console.log("Successfully connected to game server");
+    
+    conn.write("Name: DIN")
   });
 
   // interpret incoming data as text
