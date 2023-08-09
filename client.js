@@ -15,8 +15,6 @@ const connect = function () {
     //sending name to the server
     conn.write("Name: DIN");
 
-    conn.write("Move: up");
-    conn.write("Move: left");
 
     //continually move the snake up every 5 seconds
     // setInterval(() => {
