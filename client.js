@@ -9,9 +9,20 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
+    //handling connection event
     console.log("Successfully connected to game server");
-    
-    conn.write("Name: DIN")
+
+    //sending name to the server
+    conn.write("Name: DIN");
+
+    conn.write("Move: up");
+    conn.write("Move: left");
+
+    //continually move the snake up every 5 seconds
+    // setInterval(() => {
+    //   conn.write("Move: up")
+    // }, 2000)
+
   });
 
   // interpret incoming data as text
