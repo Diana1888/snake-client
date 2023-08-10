@@ -1,6 +1,10 @@
+// Stores the active TCP connection object.
+let connection;
+
 // setup interface to handle user input from stdin
 
-const setupInput = function () {
+const setupInput = (conn) => {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -12,13 +16,38 @@ const setupInput = function () {
   return stdin;
 };
 
-//function that terminates the game
-const handleUserInput = function (key) {
+//function that handles snake movements
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
+  if (key === 'w') {
+    connection.write("Move: up");
+  }
+  if (key === 'a') {
+    connection.write("Move: left");
+  }
+  if (key === 's') {
+    connection.write("Move: down");
+  }
+  if (key === 'd') {
+    connection.write("Move: right");
+  }
+
+  if (key === 'g') {
+    connection.write("Say: Good luck");
+  }
+
+  if (key === 'y') {
+    connection.write("Say: You can do IT");
+  }
+
+  if (key === 'n') {
+    connection.write("Say: WIN!!");
+  }
+
 };
 
-// setupInput();
+
 
 module.exports = {  setupInput };
