@@ -10,7 +10,7 @@ const MESSAGES = {
   y: "Say: You can do IT",
   b: "Say: Go Big!",
   n: "Say: GO!GO!GO!"
-}
+};
 
 module.exports = {
   IP,

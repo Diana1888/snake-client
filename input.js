@@ -35,16 +35,15 @@ const handleUserInput = function(key) {
   if (key === MOVE_RIGHT_KEY) {
     connection.write("Move: right");
   }
-  //handling messages 
-  for (const element in MESSAGES){ 
+
+  //handling messages, that will be seen on the screen
+  for (const element in MESSAGES) {
     if (key === element) {
       connection.write(MESSAGES[element]);
     }
   }
 
-
 };
-
 
 
 module.exports = {  setupInput };
