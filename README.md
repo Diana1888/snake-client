@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-![Alt text](screen-snake.jpg)
+![screen-snake](https://github.com/Diana1888/snake-client/assets/56414696/a233a70d-0ba1-470c-a9b6-ddefd37ee8f4)
 
 
 ## Getting Started
